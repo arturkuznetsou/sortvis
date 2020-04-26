@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+	background: lightgrey;
+}
+#field {
+	margin: auto;
+	align: center;
+	width: 500px;
+	height: 400px;
+	position: relative;
+	background: white;
+}
+.animate {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-color: red;
+}
+.bar{
+	height: 10px;
+	width: 10px;
+	background-color: green;
+	position: absolute;
+}
+</style>
+<body onload='genBars();'>
+
+<input type='range' min='3' max='30' value='10' class='slider' id='nBars' onclick='genBars()'><br>
+<input type='range' min='3' max='50' value='10' class='slider' id='height' onclick='genBars()'><br>
+<button onclick='bubbleSort()'> Bubble Sort </button>
+<button onclick='quickSort()'> Quick Sort </button>
+
+<div id ='field'>
+</div>
+
+<script src='sort.js'></script>
+<script src='algs.js'></script>
+</div>
+
+</body>
+</html>
