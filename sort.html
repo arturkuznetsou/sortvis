@@ -6,6 +6,7 @@ body{
 }
 #field {
 	margin: auto;
+	margin-top: 60px;
 	align: center;
 	width: 500px;
 	height: 400px;
@@ -24,18 +25,49 @@ body{
 	background-color: green;
 	position: absolute;
 }
+.box{
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	border: solid 1px black;
+	width: 150px;
+	float: left;
+	margin-right: 20px;
+}
+.opts{
+	width: 800px;
+	margin: auto;
+}
+.button{
+	display: block;
+}
 </style>
 <body onload='genBars();'>
 
-<input type='range' min='3' max='30' value='10' class='slider' id='nBars' onclick='genBars()'><br>
-<input type='range' min='3' max='50' value='10' class='slider' id='height' onclick='genBars()'><br>
-<button onclick='bubbleSort()'> Bubble Sort </button>
-<button onclick='quickSort()'> Quick Sort </button>
+<div class='opts'>
+	<div class='box'>
+		Amount of bars
+		<input type='range' min='3' max='30' value='10' class='slider' id='nBars' oninput='genBars()'>
+	</div>
+	<div class='box'>
+		Bar height
+		<input type='range' min='3' max='100' value='50' class='slider' id='height' oninput='resize()'>
+	</div>
+	<div class='box'>
+		Delay
+		<input type='range' min='10' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
+	</div>
+	<button onclick='bubbleSort()' class='button'> Bubble Sort </button>
+	<button onclick='quickSort()' class='button'> Quick Sort </button>
+	<button onclick='genBars()' class='button'> Refresh </button>
+</div>
 
 <div id ='field'>
 </div>
 
-<script src='sort.js'></script>
+<script src='algfuncs.js'></script>
+<script src='funcs.js'></script>
+<script src='genfield.js'></script>
 <script src='algs.js'></script>
 </div>
 

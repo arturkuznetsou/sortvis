@@ -1,78 +1,118 @@
-
-
-function swap(ind1, ind2) {
-	var element1 = document.getElementById(String(ind1));
-	var element2 = document.getElementById(String(ind2));
-	var el1 = element1.style.left;
-	var el2 = element2.style.left;
-	document.getElementById(String(ind1)).style.left = el2;
-	document.getElementById(String(ind2)).style.left = el1;
-	element1.id = ind2;
-	element2.id = ind1;
-}
-
-function move(begin, end)
+var unoc = 'green';
+var chc = 'yellow';
+var donec = 'grey';
+/* QUICK SORT
+   QUICK SORT
+   QUICK SORT
+   QUICK SORT
+   QUICK SORT
+   QUICK SORT
+   QUICK SORT
+   QUICK SORT */
+async function quickSortSub(ind)
 {
-	while(begin != end)
-	{
-		swap(begin, begin + 1 - 2 * (begin > end));
-		begin += 1 - 2 * (begin > end);
-	}
-}
-
-
-function greater(ind1, ind2)
-{
-	var i1 = document.getElementById(String(ind1)).style.height;
-	var i2 = document.getElementById(String(ind2)).style.height;
-	i1 = Number(i1.slice(0, -2));
-	i2 = Number(i2.slice(0, -2));
-	return i1 > i2;
-}
-function quickSort(start, end)
-{
-	document.getElementById('0').style.backgroundColor = 'red';
-	var len = document.getElementById('nBars').value;
+	changeColor(ind.start, 'red');
 	var less = 0;
-	for(var n = 1; n < len; n++)
+	await sleep(delay)
+	for(var n = ind.start + 1; n < ind.end; n++)
 	{
-
-		if(greater(less, n))
+		changeColor(n, chc);
+		await sleep(delay)
+		if(greater(less + ind.start, n))
 		{
-			move(n, 0);
+			if(n > ind.start + less)
+			{
+				move(n, ind.start);
+				await sleep(delay)
+				changeColor(ind.start, unoc);
+			}
+			else{
+				changeColor(n, unoc);
+				await sleep(delay)
+			}
 			less += 1;
 		}
 		else{
-			move(n, less + 1);
+			if(n < ind.start + less)
+			{
+				move(n, ind.start + less + 1);
+				changeColor(ind.start + less + 1, unoc);
+				await sleep(delay);
+			}
+			else{
+				changeColor(n, unoc);
+				await sleep(delay);
+			}
 		}
+		if(change) { return; }
 	}
-	return less;
+	changeColor(ind.start + less, donec);
+	return less + ind.start;
 }
+
+async function quickSort()
+{
+	change = false;
+	var len = Number(document.getElementById('nBars').value);
+	indeces = [-1, len];
+	while(indeces.length > 1)
+	{
+		var n = await quickSortSub({start: indeces[0] + 1, end: indeces[1]});
+		indeces.splice(1, 0, n);
+
+		while(indeces[1] - indeces[0] < 3 && indeces.length > 1)
+		{
+			indeces.splice(0, 1);
+			if(indeces[0] != 0)
+			{
+				changeColor(indeces[0] - 1, donec);
+			}
+		}
+		for(var i = 0; i < indeces.length - 1; i++)
+		{
+			console.log(i);
+			if(indeces[i + 1] - indeces[i] < 3)
+			{
+				changeColor(indeces[i], donec);
+			}
+		}
+		if(change) { return; }
+	}
+}
+
+/* BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT
+   BUBBLE SORT */
 
 async function bubbleSort()
 {
+	change = false;
 	var execN = document.getElementById('nBars').value;
 	for(var n = execN; n > 0; n--)
 	{
 		let index = 0;
 		while(index + 1 < n)
 		{
-			var i1 = document.getElementById(String(index));
-			var i2 = document.getElementById(String(index + 1));
-
-			i1.style.backgroundColor = 'yellow';
-			i2.style.backgroundColor = 'yellow';
+			changeColor(index, chc);
+			changeColor(index + 1, chc);
 
 			if(greater(index, index + 1))
 			{
-				await sleep(150);
+				await sleep(delay);
 				swap(index, index + 1);
 			}
-			await sleep(400);
+			await sleep(delay);
 
-			i1.style.backgroundColor = 'green';
-			i2.style.backgroundColor = 'green';
+			changeColor(index, unoc);
+			changeColor(index + 1, unoc);
 			index += 1;
+			if(change) { return; }
 		}
+		changeColor(n - 1, donec);
 	}
 }
