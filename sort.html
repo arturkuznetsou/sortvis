@@ -55,7 +55,7 @@ body{
 	</div>
 	<div class='box'>
 		Delay
-		<input type='range' min='10' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
+		<input type='range' min='1' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
 	</div>
 	<button onclick='bubbleSort()' class='button'> Bubble Sort </button>
 	<button onclick='quickSort()' class='button'> Quick Sort </button>
@@ -65,10 +65,14 @@ body{
 <div id ='field'>
 </div>
 
-<script src='algfuncs.js'></script>
 <script src='funcs.js'></script>
 <script src='genfield.js'></script>
-<script src='algs.js'></script>
+
+<script src='algs/bubblesort.js'></script>
+<script src='algs/quicksort.js'></script>
+<script src='algs/algfuncs.js'></script>
+<script src='algs/vars.js'></script>
+
 </div>
 
 </body>
