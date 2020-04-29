@@ -42,6 +42,8 @@ async function quickSortSub(ind)
 async function quickSort()
 {
 	change = false;
+	if(busy){ return;}
+	busy = true;
 	var len = Number(document.getElementById('nBars').value);
 	indeces = [-1, len];
 	while(indeces.length > 1)

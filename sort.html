@@ -13,12 +13,6 @@ body{
 	position: relative;
 	background: white;
 }
-.animate {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	background-color: red;
-}
 .bar{
 	height: 10px;
 	width: 10px;
@@ -57,8 +51,10 @@ body{
 		Delay
 		<input type='range' min='1' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
 	</div>
-	<button onclick='bubbleSort()' class='button'> Bubble Sort </button>
 	<button onclick='quickSort()' class='button'> Quick Sort </button>
+	<button onclick='bubbleSort()' class='button'> Bubble Sort </button>
+	<button onclick='gnomeSort()' class='button'> Gnome Sort </button>
+	<button onclick='bogoSort()' class='button'> Bogo Sort </button>
 	<button onclick='genBars()' class='button'> Refresh </button>
 </div>
 
@@ -72,6 +68,8 @@ body{
 <script src='algs/quicksort.js'></script>
 <script src='algs/algfuncs.js'></script>
 <script src='algs/vars.js'></script>
+<script src='algs/gnomesort.js'></script>
+<script src='algs/bogosort.js'></script>
 
 </div>
 
