@@ -10,7 +10,7 @@
 async function bubbleSort()
 {
 	change = false;
-	if(busy){ return;}
+if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 	var execN = document.getElementById('nBars').value;
 	for(var n = execN; n > 0; n--)

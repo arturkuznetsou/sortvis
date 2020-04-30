@@ -1,6 +1,6 @@
 async function mergeSort()
 {
 	change = false;
-	if(busy){ return;}
+if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 }

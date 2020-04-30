@@ -3,7 +3,7 @@ var hBar;
 var delay = 200;
 var change = false;
 
-function genBars()
+async function genBars()
 {
 	change = true;
 	var fld = document.getElementById('field');
@@ -38,4 +38,6 @@ function genBars()
 		bar.style.left = 0.5 * wBar + wBar * n * 2 + 'px';
 		fld.appendChild(bar);
 	}
+	busy = false;
+	await sleep(2 * delay);
 }

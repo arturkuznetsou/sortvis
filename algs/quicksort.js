@@ -7,6 +7,7 @@ async function quickSortSub(ind)
 	{
 		changeColor(n, chc);
 		await sleep(delay)
+		if(change) { return; }
 		if(greater(less + ind.start, n))
 		{
 			if(n > ind.start + less)
@@ -42,7 +43,7 @@ async function quickSortSub(ind)
 async function quickSort()
 {
 	change = false;
-	if(busy){ return;}
+if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 	var len = Number(document.getElementById('nBars').value);
 	indeces = [-1, len];
@@ -61,7 +62,6 @@ async function quickSort()
 		}
 		for(var i = 0; i < indeces.length - 1; i++)
 		{
-			console.log(i);
 			if(indeces[i + 1] - indeces[i] < 3)
 			{
 				changeColor(indeces[i], donec);
@@ -70,5 +70,4 @@ async function quickSort()
 		if(change) { return; }
 	}
 }
-
 
