@@ -17,20 +17,32 @@ async function merge(start, mid, end)
 	}
 }
 
+async function mergeSort(start = 0, len = document.getElementById('nBars').value)
+{
+	if(len - start > 1)
+	{
+		var mid = Math.floor((len - start) / 2 + start);
+		await mergeSort(start, mid);
+		await mergeSort(mid, len);
+		await merge(start, mid, len);
+	}
+}
+/*
 async function mergeSort()
 {
 	change = false;
 	if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 	var len = document.getElementById('nBars').value;
-	pairs = [];
-	for(var n = 0; n < (len - (len % 2)) / 2; n++)
+	inds1 = [];
+	inds2 = [];
+	for(var n = 0; n < len; n++)
 	{
-		pairs.push([n * 2, n * 2 + 1]);
+		if(n < len / 2 + 1) { inds1.push(n); inds1[inds1.length - 1];}
+		else { inds2.push(n); }
 	}
-	if(len % 2 == 1) { pairs[Math.floor(len / 2 - 1)][1] = len - 1; }
-	for(pair of pairs)
-	{
-		merge(pair[0], pair[1], pair[1] + 1);
-	}
+	prompt(inds1);
+	prompt(inds2);
+	busy = false;
 }
+*/
