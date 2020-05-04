@@ -7,11 +7,16 @@ body{
 #field {
 	margin: auto;
 	margin-top: 60px;
-	align: center;
-	width: 800px;
+	width: 90%;
 	height: 400px;
 	position: relative;
 	background: white;
+}
+#note {
+	margin-top: 10px;
+	margin-left: 15%;
+	color: red;
+	width: 70%;
 }
 .bar{
 	height: 10px;
@@ -33,7 +38,7 @@ body{
 	width: 100%;
 }
 .buttons{
-	margin-top: 20px;
+	margin-top: 5px;
 	margin-left: 20%;
 	display: block;
 }
@@ -50,29 +55,38 @@ body{
 	cursor: pointer;
 }
 </style>
+<meta charset="UTF-8">
 <body onload='genBars();'>
-
 <div class='opts'>
 	<div class='box'>
 		Amount of bars
-		<input type='range' min='3' max='30' value='10' class='slider' id='nBars' oninput='genBars()'>
+		<input type='range' min='3' max='80' value='30' class='slider' id='nBars' oninput='genBars()'>
 	</div>
 	<div class='box'>
 		Bar height
-		<input type='range' min='3' max='100' value='50' class='slider' id='height' oninput='resize()'>
+		<input type='range' min='3' max='100' value='20' class='slider' id='height' oninput='resize()'>
 	</div>
 	<div class='box'>
 		Delay
-		<input type='range' min='1' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
+		<input type='range' min='0' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
 	</div>
 </div>
+	<br>
+
 	<div class='buttons'>
 	<button onclick='quickSort()' class='button'> Quicksort </button>
+	<button onclick='mergeSort()' class='button'> Mergesort </button>
+
 	<button onclick='bubbleSort()' class='button'> Bubblesort </button>
 	<button onclick='gnomeSort()' class='button'> Gnomesort </button>
 	<button onclick='bogoSort()' class='button'> Bogosort </button>
-	<button onclick='mergeSort()' class='button'> Mergesort </button>
+
 	<button onclick='genBars()' class='button'> New field </button>
+
+	</div>
+	<div id='note'> Note: the animations are strictly educational.
+		It does not accurately represent the sorting speed of the shown algorithms,
+		due to its visualization capabilities.
 	</div>
 
 <div id ='field'>

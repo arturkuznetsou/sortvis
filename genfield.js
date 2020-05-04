@@ -13,7 +13,6 @@ async function genBars()
 	var height = document.getElementById('height').value;
 
 	wBar = Math.round(width/(nBars * 2));
-	console.log(wBar)
 	hBar = height;
 
 	if(hBar < 1) { hBar = 1; }

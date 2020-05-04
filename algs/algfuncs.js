@@ -1,9 +1,8 @@
-
-function changeColor(ind, col)
+async function changeColor(ind, col)
 {
 	 document.getElementById(String(ind)).style.backgroundColor = col;
 }
-function swap(ind1, ind2) {
+async function swap(ind1, ind2) {
 	var element1 = document.getElementById(String(ind1));
 	var element2 = document.getElementById(String(ind2));
 	var el1 = element1.style.left;
@@ -14,7 +13,7 @@ function swap(ind1, ind2) {
 	element2.id = ind1;
 }
 
-function move(begin, end)
+async function move(begin, end)
 {
 	while(begin != end)
 	{

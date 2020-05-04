@@ -1,7 +1,7 @@
 async function gnomeSort()
 {
 	change = false;
-if (busy) { window.alert(busyMessage); return;}
+	if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 	var index = 0;
 	var len = Number(document.getElementById('nBars').value);
