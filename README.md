@@ -1,9 +1,9 @@
-# working algorithms
-bogosort
-bubblesort
-gnomesort
-mergesort
-quicksort
+# working algorithms </br>
+bogosort </br>
+bubblesort </br>
+gnomesort </br>
+mergesort </br>
+quicksort </br>
 
 # work in progress
 
