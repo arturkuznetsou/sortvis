@@ -14,7 +14,6 @@ async function merge(start, mid, end)
 	changeColor(start, mc1c);
 	changeColor(mid, mc2c);
 
-
 	await sleep(delay);
 	while(start < mid && ind < end)
 	{
@@ -23,7 +22,6 @@ async function merge(start, mid, end)
 		changeColor(ind, mc2c);
 		await sleep(delay);
 
-		//ccolor = mc1 or mc2. Doing this prevents the use of an else statement.
 		let ccolor = mc1;
 		if(greater(start, ind))
 		{

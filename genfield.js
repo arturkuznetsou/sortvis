@@ -6,6 +6,7 @@ var change = false;
 async function genBars()
 {
 	change = true;
+	document.getElementById('field').style.width = '90%';
 	var fld = document.getElementById('field');
 	var nBars = document.getElementById('nBars').value;
 	fld.innerHTML = "";

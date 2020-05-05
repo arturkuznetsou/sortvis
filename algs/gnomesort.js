@@ -10,7 +10,6 @@ async function gnomeSort()
 		var x = n;
 		if(change) { return; }
 		changeColor(x, pivc);
-		await sleep(delay);
 		if(change) { return; }
 		while(x > 0 && !greater(x, x - 1))
 		{

@@ -1,0 +1,17 @@
+body{
+	background: lightgrey;
+}
+#field {
+	margin: auto;
+	margin-top: 15px;
+	height: 400px;
+	position: relative;
+	background: white;
+}
+#note {
+	margin-top: 10px;
+	margin-left: 15%;
+	color: red;
+	width: 70%;
+}
+

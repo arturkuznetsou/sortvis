@@ -1,100 +1,53 @@
 <!DOCTYPE html>
 <html>
-<style>
-body{
-	background: lightgrey;
-}
-#field {
-	margin: auto;
-	margin-top: 60px;
-	width: 65%;
-	height: 400px;
-	position: relative;
-	background: white;
-}
-#note {
-	margin-top: 10px;
-	margin-left: 15%;
-	color: red;
-	width: 70%;
-}
-.bar{
-	height: 10px;
-	width: 10px;
-	background-color: green;
-	position: absolute;
-}
-.box{
-	padding: 30px 40px;
-	background-color: white;
-	text-align: center;
-	width: 150px;
-	float: left;
-	margin-right: 20px;
-}
-.opts{
-	margin-left: 10%;
-	height: 100px;
-	width: 100%;
-}
-.buttons{
-	margin-top: 5px;
-	margin-left: 20%;
-	display: block;
-}
-.button {
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-}
-</style>
+
 <meta charset="UTF-8">
 <body onload='genBars();'>
 <div class='opts'>
 	<div class='box'>
 		Amount of bars
-		<input type='range' min='3' max='80' value='30' class='slider' id='nBars' oninput='genBars()'>
+		<input class='slider' type='range' min='3' max='80' value='30' class='slider' id='nBars' oninput='genBars()'>
 	</div>
 	<div class='box'>
 		Bar height
-		<input type='range' min='3' max='100' value='20' class='slider' id='height' oninput='resize()'>
+		<input class='slider' type='range' min='3' max='100' value='20' class='slider' id='height' oninput='resize()'>
 	</div>
 	<div class='box'>
 		Delay
-		<input type='range' min='0' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
+		<input class='slider' type='range' min='0' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
 	</div>
 </div>
 	<br>
 
-	<div class='buttons'>
+<div class='buttons'>
+
+	<div id='fast'>
 	<button onclick='quickSort()' class='button'> Quicksort </button>
 	<button onclick='mergeSort()' class='button'> Mergesort </button>
+	<button onclick='heapSort()' class='button'> Heapsort </button>
+	</div>
 
+	<div id='educ'>
 	<button onclick='bubbleSort()' class='button'> Bubblesort </button>
 	<button onclick='gnomeSort()' class='button'> Gnomesort </button>
 	<button onclick='bogoSort()' class='button'> Bogosort </button>
-
+	</div>
 	<button onclick='genBars()' class='button'> New field </button>
 
-	</div>
-	<div id='note'> Note: the animations are strictly educational.
-		It does not accurately represent the sorting speed of the shown algorithms,
-		due to its visualization capabilities.
+</div>
+
+	<div id='note'> Note:
+		The animations do not accurately represent the sorting speed of the shown algorithms.
 	</div>
 
 <div id ='field'>
 </div>
 
+
 <script src='funcs.js'></script>
 <script src='genfield.js'></script>
 
+<script src='algs/heapsort.js'></script>
 <script src='algs/bubblesort.js'></script>
 <script src='algs/quicksort.js'></script>
 <script src='algs/algfuncs.js'></script>
@@ -102,6 +55,12 @@ body{
 <script src='algs/gnomesort.js'></script>
 <script src='algs/bogosort.js'></script>
 <script src='algs/mergesort.js'></script>
+
+<link rel='stylesheet' type='text/css' href='css/buttons.css'>
+<link rel='stylesheet' type='text/css' href='css/opts.css'>
+<link rel='stylesheet' type='text/css' href='css/other.css'>
+<link rel='stylesheet' type='text/css' href='css/slider.css'>
+
 
 </div>
 
