@@ -3,10 +3,10 @@
 
 <meta charset="UTF-8">
 <body onload='genBars();'>
-<div class='opts'>
+<div id='opts'>
 	<div class='box'>
 		Amount of bars
-		<input class='slider' type='range' min='3' max='80' value='30' class='slider' id='nBars' oninput='genBars()'>
+		<input class='slider' type='range' min='3' max='60' value='30' class='slider' id='nBars' oninput='genBars()'>
 	</div>
 	<div class='box'>
 		Bar height
@@ -14,12 +14,12 @@
 	</div>
 	<div class='box'>
 		Delay
-		<input class='slider' type='range' min='0' max='500' value='200' class='slider' id='delay' oninput='setDelay()'>
+		<input class='slider' type='range' min='5' max='200' value='50' class='slider' id='delay' oninput='setDelay()'>
 	</div>
 </div>
 	<br>
 
-<div class='buttons'>
+<div id='buttons'>
 
 	<div id='fast'>
 		<div class='title'> Efficient algorithms </div>
@@ -36,12 +36,13 @@
 	<button onclick='bogoSort()' class='button'> Bogosort </button>
 	</div>
 	<br> <button onclick='genBars()' class='button' style='margin-top: 10px; margin-left: 80px;'> New field </button>
+	<button onclick='hide()' class='button' id='hide' style='margin-top: 10px;'>Toggle Hide Sliders</button>
 
 </div>
 
-	<div id='note'> Note:
-		The animations do not accurately represent the sorting speed of the shown algorithms.
-		Also: If you are having trouble on mobile, try rotating your device.
+	<div id='note' onclick='hideNote()'> Note:
+		The animations do not accurately represent the sorting speed of the shown algorithms. Click on the text to hide. <br>
+		Also, if you are having trouble on mobile, try rotating your device.
 	</div>
 
 <div id ='field'>

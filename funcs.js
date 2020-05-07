@@ -1,3 +1,15 @@
+function hideNote(){
+	document.getElementById('note').style.display = "none";
+}
+function hide(){
+	if(document.getElementById('opts').style.display == '')
+	{
+		document.getElementById('opts').style.display = "none";
+	}
+	else{
+		document.getElementById('opts').style.display = "";
+	}
+}
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
