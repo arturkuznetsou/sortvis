@@ -1,9 +1,10 @@
 # working algorithms </br>
-bogosort </br>
-bubblesort </br>
-gnomesort </br>
-mergesort </br>
-quicksort </br>
+Bogosort </br>
+Bubble sort </br>
+Gnome sort </br>
+Merge sort </br>
+Quicksort </br>
+Cocktail shaker sort </br>
 
 # work in progress
-heapsort </br>
+Heapsort </br>

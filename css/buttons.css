@@ -1,6 +1,15 @@
+#educ, #fast{
+	display: inline-block;
+	width: 430px;
+	padding: 10px 20px;
+	background-color: white;
+}
+#educ{
+	margin-left: 20px;
+	width: 660px;
+}
 .buttons{
-	margin-top: 5px;
-	margin-left: 20%;
+	margin-left: 200px;
 	display: block;
 }
 .button {

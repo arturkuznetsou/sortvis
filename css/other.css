@@ -1,4 +1,5 @@
 body{
+	font-family: Arial, Helvetica, sans-serif;
 	background: lightgrey;
 }
 #field {
@@ -14,4 +15,6 @@ body{
 	color: red;
 	width: 70%;
 }
-
+.title{
+	margin-bottom: 10px;
+}

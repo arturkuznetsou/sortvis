@@ -22,22 +22,26 @@
 <div class='buttons'>
 
 	<div id='fast'>
+		<div class='title'> Efficient algorithms </div>
 	<button onclick='quickSort()' class='button'> Quicksort </button>
-	<button onclick='mergeSort()' class='button'> Mergesort </button>
+	<button onclick='mergeSort()' class='button'> Merge sort </button>
 	<button onclick='heapSort()' class='button'> Heapsort </button>
 	</div>
 
 	<div id='educ'>
-	<button onclick='bubbleSort()' class='button'> Bubblesort </button>
-	<button onclick='gnomeSort()' class='button'> Gnomesort </button>
+		<div class='title'> Educational algorithms </div>
+	<button onclick='shakerSort()' class='button'> Cocktail shaker sort </button>
+	<button onclick='bubbleSort()' class='button'> Bubble sort </button>
+	<button onclick='gnomeSort()' class='button'> Gnome sort </button>
 	<button onclick='bogoSort()' class='button'> Bogosort </button>
 	</div>
-	<button onclick='genBars()' class='button'> New field </button>
+	<br> <button onclick='genBars()' class='button' style='margin-top: 10px; margin-left: 80px;'> New field </button>
 
 </div>
 
 	<div id='note'> Note:
 		The animations do not accurately represent the sorting speed of the shown algorithms.
+		Also: If you are having trouble on mobile, try rotating your device.
 	</div>
 
 <div id ='field'>
@@ -55,6 +59,7 @@
 <script src='algs/gnomesort.js'></script>
 <script src='algs/bogosort.js'></script>
 <script src='algs/mergesort.js'></script>
+<script src='algs/shakersort.js'></script>
 
 <link rel='stylesheet' type='text/css' href='css/buttons.css'>
 <link rel='stylesheet' type='text/css' href='css/opts.css'>

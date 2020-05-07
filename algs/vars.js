@@ -22,3 +22,17 @@ var unoc = 'green';
 var chc = 'yellow';
 var donec = 'grey';
 var pivc = 'red';
+/*
+Merge sort color.
+Only 7 colors are needed for a max nBars of 100. (2 ^ 7 - 1 = 127).
+*/
+
+var mcols = [
+	'#92140C',
+	'#A4036F',
+	'#048BA8',
+	'#16DB93',
+	'#EFEA5A',
+	'#F29E4C',
+	'#16262E'
+]
