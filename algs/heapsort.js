@@ -1,5 +1,5 @@
 /*
-var mcols = [
+let mcols = [
 	'92140C',
 	'A4036F',
 	'048BA8',
@@ -8,12 +8,16 @@ var mcols = [
 	'F29E4C',
 	'16262E'
 ]
-depth = log2(items) + 1
+depth = log2(items + 1)
 */
+
 
 async function heapSort()
 {
-	for(var n = 0; n < mcols.length; n++)
+	let tree = [];
+	let len = document.getElementById('nBars').value;
+	let depth = Math.ceil(Math.log(Number(len) + 1) / Math.log(2));
+	for(let n = 0; n < mcols.length; n++)
 	{
 		changeColor(n, mcols[n]);
 	}

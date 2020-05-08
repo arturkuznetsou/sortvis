@@ -3,11 +3,11 @@ async function gnomeSort()
 	change = false;
 	if (busy) { window.alert(busyMessage); return;}
 	busy = true;
-	var index = 0;
-	var len = Number(document.getElementById('nBars').value);
-	for(var n = 1; n < len; n++)
+	let index = 0;
+	let len = Number(document.getElementById('nBars').value);
+	for(let n = 1; n < len; n++)
 	{
-		var x = n;
+		let x = n;
 		if(change) { return; }
 		changeColor(x, pivc);
 		if(change) { return; }
@@ -22,7 +22,7 @@ async function gnomeSort()
 		await sleep(delay);
 		changeColor(x, unoc);
 	}
-	for(var n = 0; n < len; n++)
+	for(let n = 0; n < len; n++)
 	{
 		changeColor(n, donec);
 	}

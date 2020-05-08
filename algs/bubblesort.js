@@ -12,24 +12,23 @@ async function bubbleSort()
 	change = false;
 	if (busy) { window.alert(busyMessage); return;}
 	busy = true;
-	var execN = document.getElementById('nBars').value;
-	for(var n = execN; n > 0; n--)
+	let execN = document.getElementById('nBars').value;
+	for(let n = execN; n > 0; n--)
 	{
 		let index = 0;
+		changeColor(index, chc);
 		while(index + 1 < n)
 		{
-			changeColor(index, chc);
 			changeColor(index + 1, chc);
 
 			if(greater(index, index + 1))
 			{
 				await sleep(delay);
-				swap(index, index + 1);
+				swapNC(index, index + 1);
 			}
 			await sleep(delay);
 
 			changeColor(index, unoc);
-			changeColor(index + 1, unoc);
 			index += 1;
 			if(change) { return; }
 		}

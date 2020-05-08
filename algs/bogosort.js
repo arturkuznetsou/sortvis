@@ -4,7 +4,7 @@ async function bogoSort()
 	if (busy) { window.alert(busyMessage); return;}
 	busy = true;
 	len = document.getElementById('nBars').value;
-	for(var i = 0; i < len - 1; i++)
+	for(let i = 0; i < len - 1; i++)
 	{
 		if(change){ return; }
 		if(greater(i, i + 1))
@@ -16,7 +16,7 @@ async function bogoSort()
 			await sleep(delay);
 		}
 	}
-	for(var n = 0; n < len; n++)
+	for(let n = 0; n < len; n++)
 	{
 		changeColor(n, donec);
 	}

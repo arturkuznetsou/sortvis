@@ -2,15 +2,26 @@ function changeColor(ind, col)
 {
 	 document.getElementById(String(ind)).style.backgroundColor = col;
 }
+//swap but dont swap the color
+function swapNC(ind1, ind2) {
+	var element1 = document.getElementById(String(ind1));
+	var element2 = document.getElementById(String(ind2));
+	var el1 = element1.style.height;
+	var el2 = element2.style.height;
+	element1.style.height = el2;
+	element2.style.height = el1;
+}
 function swap(ind1, ind2) {
 	var element1 = document.getElementById(String(ind1));
 	var element2 = document.getElementById(String(ind2));
-	var el1 = element1.style.left;
-	var el2 = element2.style.left;
-	document.getElementById(String(ind1)).style.left = el2;
-	document.getElementById(String(ind2)).style.left = el1;
-	element1.id = ind2;
-	element2.id = ind1;
+	var el1 = element1.style.height;
+	var el2 = element2.style.height;
+	element1.style.height = el2;
+	element2.style.height = el1;
+	el1 = element1.style.backgroundColor;
+	el2 = element2.style.backgroundColor;
+	element1.style.backgroundColor = el2;
+	element2.style.backgroundColor = el1;
 }
 
 function move(begin, end)

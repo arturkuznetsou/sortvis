@@ -5,50 +5,48 @@ async function shakerSort()
 	busy = true;
 	len = document.getElementById('nBars').value;
 
-	var swapped = true;
+	let swapped = true;
 	for(var n = 0; n < len && swapped; n++)
 	{
 		swapped = false;
 		let index = n;
+		changeColor(index, chc);
 		while(index + 1 < len)
 		{
-			changeColor(index, chc);
 			changeColor(index + 1, chc);
 
 			if(greater(index, index + 1))
 			{
 				swapped = true;
 				await sleep(delay);
-				swap(index, index + 1);
+				swapNC(index, index + 1);
 			}
 			await sleep(delay);
 
 			changeColor(index, unoc);
-			changeColor(index + 1, unoc);
 			index += 1;
 			if(change) { return; }
 		}
 		len -= 1;
 		changeColor(len, donec);
 		index = len - 1;
+		changeColor(index, chc);
 		if(swapped)
 		{
 			swapped = false;
 			while(index > n)
 			{
-				changeColor(index, chc);
 				changeColor(index - 1, chc);
 
 				if(!greater(index, index - 1))
 				{
 					await sleep(delay);
-					swap(index, index - 1);
+					swapNC(index, index - 1);
 					swapped = true;
 				}
 				await sleep(delay);
 
 				changeColor(index, unoc);
-				changeColor(index - 1, unoc);
 				index -= 1;
 				if(change) { return; }
 			}
