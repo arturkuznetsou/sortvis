@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 
+<title> Sort </title>
 <meta charset="UTF-8">
 <body onload='genBars();'>
 <div id='opts'>
 	<div class='box'>
 		Amount of bars
-		<input class='slider' type='range' min='3' max='60' value='30' class='slider' id='nBars' oninput='genBars()'>
+		<input class='slider' type='range' min='3' max='100' value='30' class='slider' id='nBars' oninput='genBars()'>
 	</div>
 	<div class='box'>
 		Bar height
@@ -14,7 +15,7 @@
 	</div>
 	<div class='box'>
 		Delay
-		<input class='slider' type='range' min='5' max='200' value='50' class='slider' id='delay' oninput='setDelay()'>
+		<input class='slider' type='range' min='3' max='200' value='50' class='slider' id='delay' oninput='setDelay()'>
 	</div>
 </div>
 	<br>
@@ -47,6 +48,7 @@
 
 <div id ='field'>
 </div>
+<div style='height: 310px;'> </div>
 
 
 <script src='funcs.js'></script>
