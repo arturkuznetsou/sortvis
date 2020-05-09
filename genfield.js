@@ -12,9 +12,10 @@ async function genBars()
 	fld.innerHTML = "";
 	var width = fld.offsetWidth;
 	var height = document.getElementById('height').value;
+	fld.style.height = height + 'px';
 
 	wBar = Math.round(width/(nBars * 2));
-	hBar = height;
+	hBar = Math.round(height/nBars);
 
 	if(hBar < 1) { hBar = 1; }
 

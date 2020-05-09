@@ -16,7 +16,7 @@ function sleep(ms) {
 
 function setDelay()
 {
-	delay = document.getElementById('delay').value;
+	delay = 0.5 * Math.pow(document.getElementById('delay').value / 2, 2);
 }
 
 function shuffle(a) {
@@ -32,14 +32,14 @@ function shuffle(a) {
 
 function resize()
 {
-	var oldHeight = hBar;
-	hBar = document.getElementById('height').value;
+	var oldHeight = document.getElementById('field').offsetHeight;
+	var newHeight = document.getElementById('height').value;
 	var nBars = document.getElementById('nBars').value;
 	for(var n = 0; n < nBars; n++)
 	{
 		bar = document.getElementById(String(n));
 		let barH = Number(bar.style.height.slice(0, -2));
-		document.getElementById(String(n)).style.height = barH * (hBar / oldHeight) + 'px';
+		document.getElementById(String(n)).style.height = barH * (newHeight / oldHeight) + 'px';
 	}
-	document.getElementById('field').style.height = hBar * nBars + 10  + 'px';
+	document.getElementById('field').style.height = newHeight + 'px';
 }
