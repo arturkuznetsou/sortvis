@@ -13,6 +13,9 @@
 
 async function heapSort()
 {
+	change = false;
+	if (busy) { window.alert(busyMessage); return;}
+	busy = true;
 	let len = document.getElementById('nBars').value;
 	let depth = Math.ceil(Math.log(Number(len) + 1) / Math.log(2));
 
@@ -51,10 +54,15 @@ async function heapSort()
 				nextD = nextnextD;
 				nextnextD = Math.pow(2, depth - 2) - 2;
 			}
+			if(change){ return;}
+			await sleep(delay);
 		}
+		if(change){ return;}
+		await sleep(delay);
 		len -= 1;
 		swapNC(0, len);
 		changeColor(len, donec);
 	}
 	changeColor(0, donec);
+	changeColor(1, donec);
 }

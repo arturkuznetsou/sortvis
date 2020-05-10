@@ -4,21 +4,6 @@
 <title> Sort </title>
 <meta charset="UTF-8">
 <body onload='genBars();'>
-<div id='opts'>
-	<div class='box'>
-		Amount of bars
-		<input class='slider' type='range' min='3' max='100' value='30' class='slider' id='nBars' oninput='genBars()'>
-	</div>
-	<div class='box'>
-		Bar height
-		<input class='slider' type='range' min='100' max='1000' value='500' class='slider' id='height' oninput='resize()'>
-	</div>
-	<div class='box'>
-		Delay
-		<input class='slider' type='range' min='1' max='20' value='10' class='slider' id='delay' oninput='setDelay()'>
-	</div>
-</div>
-	<br>
 
 <div id='buttons'>
 
@@ -36,10 +21,25 @@
 	<button onclick='gnomeSort()' class='button'> Gnome sort </button>
 	<button onclick='bogoSort()' class='button'> Bogosort </button>
 	</div>
-	<br> <button onclick='genBars()' class='button' style='margin-top: 10px; margin-left: 80px;'> New field </button>
-	<button onclick='hide()' class='button' id='hide' style='margin-top: 10px;'>Toggle Hide Sliders</button>
 
 </div>
+	<br>
+<div id='opts'>
+	<div class='box'>
+		Amount of bars
+		<input class='slider' type='range' min='3' max='100' value='30' class='slider' id='nBars' oninput='genBars()'>
+	</div>
+	<div class='box'>
+		Bar height
+		<input class='slider' type='range' min='100' max='1000' value='500' class='slider' id='height' oninput='resize()'>
+	</div>
+	<div class='box'>
+		Delay
+		<input class='slider' type='range' min='2' max='20' value='10' class='slider' id='delay' oninput='setDelay()'>
+	</div>
+</div>
+	<br> <button onclick='genBars()' class='button' style='margin-top: 10px; margin-left: 300px;'> New field </button>
+	<button onclick='hide()' class='button' id='hide' style='margin-top: 10px;'>Toggle Hide Sliders</button>
 
 	<div id='note' onclick='hideNote()'> Note:
 		The animations do not accurately represent the sorting speed of the shown algorithms. Click on the text to hide. <br>
@@ -48,7 +48,7 @@
 
 <div id ='field'>
 </div>
-<div style='height: 310px;'> </div>
+<div style='height: 150px;'> </div>
 
 
 <script src='funcs.js'></script>

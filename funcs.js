@@ -16,11 +16,14 @@ function sleep(ms) {
 
 function setDelay()
 {
+	/*
+	 *The delay is not linear. This is in my opinion more natural than a linearly scaled delay.
+	 */
 	delay = 0.5 * Math.pow(document.getElementById('delay').value / 2, 2);
 }
 
 function shuffle(a) {
-	var j, x, i;
+	let j, x, i;
 	for (i = a.length - 1; i > 0; i--) {
 		j = Math.floor(Math.random() * (i + 1));
 		x = a[i];
@@ -32,10 +35,10 @@ function shuffle(a) {
 
 function resize()
 {
-	var oldHeight = document.getElementById('field').offsetHeight;
-	var newHeight = document.getElementById('height').value;
-	var nBars = document.getElementById('nBars').value;
-	for(var n = 0; n < nBars; n++)
+	let oldHeight = document.getElementById('field').offsetHeight;
+	let newHeight = document.getElementById('height').value;
+	let nBars = document.getElementById('nBars').value;
+	for(let n = 0; n < nBars; n++)
 	{
 		bar = document.getElementById(String(n));
 		let barH = Number(bar.style.height.slice(0, -2));
