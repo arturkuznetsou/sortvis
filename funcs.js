@@ -20,6 +20,7 @@ function setDelay()
 	 *The delay is not linear. This is in my opinion more natural than a linearly scaled delay.
 	 */
 	delay = 0.5 * Math.pow(document.getElementById('delay').value / 2, 2);
+	console.log(delay);
 }
 
 function shuffle(a) {
