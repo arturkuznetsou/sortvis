@@ -2,6 +2,12 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	background: lightgrey;
 }
+.bar{
+	height: 10px;
+	width: 10px;
+	background-color: green;
+	position: absolute;
+}
 #field {
 	margin: auto;
 	margin-top: 15px;

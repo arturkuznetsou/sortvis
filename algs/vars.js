@@ -24,7 +24,7 @@ var donec = 'grey';
 var pivc = 'red';
 /*
 Merge sort color.
-Only 7 colors are needed for a max nBars of 100. (2 ^ 7 - 1 = 127).
+Only 8 colors are needed for a max nBars of 200. (2 ^ 8 - 1 = 255).
 */
 
 var mcols = [

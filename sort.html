@@ -3,7 +3,25 @@
 
 <title> Sort </title>
 <meta charset="UTF-8">
-<body onload='genBars();'>
+<script src='funcs.js'></script>
+<script src='genfield.js'></script>
+
+<script src='algs/heapsort.js'></script>
+<script src='algs/bubblesort.js'></script>
+<script src='algs/quicksort.js'></script>
+<script src='algs/algfuncs.js'></script>
+<script src='algs/vars.js'></script>
+<script src='algs/gnomesort.js'></script>
+<script src='algs/bogosort.js'></script>
+<script src='algs/mergesort.js'></script>
+<script src='algs/shakersort.js'></script>
+
+<link rel='stylesheet' type='text/css' href='css/buttons.css'>
+<link rel='stylesheet' type='text/css' href='css/opts.css'>
+<link rel='stylesheet' type='text/css' href='css/other.css'>
+<link rel='stylesheet' type='text/css' href='css/slider.css'>
+
+<body onload='genBars(); setDelay();'>
 
 <div id='buttons'>
 
@@ -27,7 +45,7 @@
 <div id='opts'>
 	<div class='box'>
 		Amount of bars
-		<input class='slider' type='range' min='3' max='100' value='30' class='slider' id='nBars' oninput='genBars()'>
+		<input class='slider' type='range' min='3' max='300' value='30' class='slider' id='nBars' oninput='genBars()'>
 	</div>
 	<div class='box'>
 		Bar height
@@ -41,7 +59,7 @@
 	<br> <button onclick='genBars()' class='button' style='margin-top: 10px; margin-left: 300px;'> New field </button>
 	<button onclick='hide()' class='button' id='hide' style='margin-top: 10px;'>Toggle Hide Sliders</button>
 	<a href='https://en.wikipedia.org/wiki/Sorting_algorithm#Popular_sorting_algorithms' target='_blank'>
-		<i class='fab fa-wikipedia-w fa-2x' style='color: #4CAF50; padding: 0px;'></i>
+		<img src='wikipedia.svg' style='height: 30px; padding: 0px 10px;'></img>
 	</a>
 
 	<div id='note' onclick='hideNote()'> Note:
@@ -55,25 +73,6 @@
 </div>
 
 
-
-<script src='funcs.js'></script>
-<script src='genfield.js'></script>
-
-<script src='algs/heapsort.js'></script>
-<script src='algs/bubblesort.js'></script>
-<script src='algs/quicksort.js'></script>
-<script src='algs/algfuncs.js'></script>
-<script src='algs/vars.js'></script>
-<script src='algs/gnomesort.js'></script>
-<script src='algs/bogosort.js'></script>
-<script src='algs/mergesort.js'></script>
-<script src='algs/shakersort.js'></script>
-<script src='https://kit.fontawesome.com/3a9cf126b0.js' crossorigin='anonymous'></script>
-
-<link rel='stylesheet' type='text/css' href='css/buttons.css'>
-<link rel='stylesheet' type='text/css' href='css/opts.css'>
-<link rel='stylesheet' type='text/css' href='css/other.css'>
-<link rel='stylesheet' type='text/css' href='css/slider.css'>
 
 
 </div>
