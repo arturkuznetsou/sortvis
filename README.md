@@ -1,4 +1,5 @@
 # This application visualizes common sorting algorithms. Just open the HTML file and see for yourself! </br>
+Or try it out here: http://www.arturk.tk/projects/sortvis </br>
 </br>
 The following algorithms are visualized:</br>
 	Bogosort </br>
@@ -8,3 +9,4 @@ The following algorithms are visualized:</br>
 	Quicksort </br>
 	Cocktail shaker sort </br>
 	Heapsort </br>
+
